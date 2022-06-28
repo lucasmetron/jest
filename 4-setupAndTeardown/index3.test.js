@@ -33,10 +33,10 @@ function isValidCityFoodPair(name, food){
 
 
 function isCity(name) {
-  return cities.map(()=>city.includes(name));
+  return cities.map(city=>city.name).includes(name);
 }
 
-// Applies to all tests in this file
+// aplica em todos os testes do arquivo
 beforeEach(() => {
   return initializeCityDatabase();
 });
@@ -50,7 +50,7 @@ test('city database has San Juan', () => {
 });
 
 describe('matching cities to foods', () => {
-  // Applies only to tests in this describe block
+  // aplica somente nos testes dentro do describe
   beforeEach(() => {
     return initializeFoodDatabase();
   });
